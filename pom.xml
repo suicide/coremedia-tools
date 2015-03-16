@@ -34,12 +34,6 @@
         <scope>provided</scope>
       </dependency>
       <dependency>
-        <groupId>com.coremedia.blueprint</groupId>
-        <artifactId>cae-base-lib</artifactId>
-        <version>${coremedia.version}</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
         <groupId>com.coremedia.cms</groupId>
         <artifactId>commandline-tools-base</artifactId>
         <version>${coremedia.version}</version>

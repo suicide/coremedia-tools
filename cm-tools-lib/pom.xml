@@ -24,10 +24,6 @@
       <artifactId>cap-objectserver</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.coremedia.blueprint</groupId>
-      <artifactId>cae-base-lib</artifactId>
-    </dependency>
-    <dependency>
       <groupId>com.coremedia.cms</groupId>
       <artifactId>commandline-tools-base</artifactId>
     </dependency>
