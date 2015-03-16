@@ -5,6 +5,7 @@ package de.ahoiit.cm.tools.zombiekiller;
  */
 
 import com.coremedia.cap.content.Content;
+import com.coremedia.cap.content.NoContentObjectLeftException;
 import com.coremedia.cap.content.Version;
 import com.coremedia.cmdline.AbstractUAPIClient;
 import org.apache.commons.cli.CommandLine;
@@ -134,7 +135,13 @@ public class Zombiekiller extends AbstractUAPIClient {
               + " references deleted content in Version " + version.getId());
       if (kill) {
         getOut().info("deleting version " + version.getId() + "...");
-        version.destroy();
+
+        try {
+          version.destroy();
+        } catch (NoContentObjectLeftException e) {
+          getOut().warn("Unable to delete version " + version.getId() + ", because it is the only version left of this " +
+            "object", e);
+        }
       }
     }
   }
